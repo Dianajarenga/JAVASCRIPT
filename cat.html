@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="quiz">
+        <form action="cat.html">
+        <label for="name">Name     :
+        <input type="text" value="Diana">
+        </label>
+        </form><br>
+
+        <form action="cat.html" , id="form">
+        <label for="Class">Class    :
+        <input type="text" value="Jarenga">
+        </label>
+        </form><br>
+
+        <form action="cat.html">
+        <label for="Subject">Subject:
+        <input type="text" value="JavaScript">
+        </label>
+        </form><br>
+
+        <form action="cat.html" >
+        <label for="date">Date
+        <input type="date" value=23/09/1997>
+        </label>
+        </form><br>
+        
+    </div>
+<button id="submit"  onclick="results()" id="results">Get Results</button>
+<div id="results">
+    
+</div>
+
+    <script>
+        function results() {
+          var x = document.getElementById("quiz");
+          var text = "";
+          var i;
+          for (i = 0; i < x.length ;i++) {
+            text += x.elements[i].value + "<br>";
+          }
+          document.getElementById("submit").innerHTML = text;
+          document.getElementById("submit").innerHTML = date;
+        }
+   
+   </script>
+
+   <h1>     Creating an object in JavaScript</h1>
+<p>
+objects in javascript are compared to real life objects ,they have behaviours and<br>
+properties.these behaviours are considered as methods .in the example of a car its methods would be<br>
+start, stop,hoot,while it's properties are color make and model.<br>
+creating an object in javascript is done using the following syntax:<br>
+//a key  eg name and value eg "Diana" enclosed in curly braces. and stored in a variable 'let'<br>
+
+let obj1={name:"Diana",age:21}
+ console.log(obj1); 
+
+ //this would output an array  [name:"Diana",age:21]
+ console.log(obj1.name)
+ //"Diana" 
+
+
+
+</p>
+<h1> Scopes in JavaScript</h1>
+
+
+
+
+ <p>
+     A javascript scope is the accessibility or visibility of a variable within or outside a function.
+     we have 2-Local and Global.
+    local means it is accessible within a function
+    while global means accessibility outside a function.
+    usability of code inside a function also depends on where the function is called this is because where one calls the function 
+    changes the scope in which certain code is accesed.
+    syntax example.
+
+    fullName();
+    let x="nick name"
+    function fullName(){
+
+    console.log(x)
+
+    }
+    this will output the value of variable x .x is accessible in function fullname .
+   
+   <br>
+   //x is not accessible 
+  
+    function fullName(){
+        let x="nick name"
+    console.log(x)
+
+    }
+    fullName();
+   //x will not be accissible before the function scope because we call the function after the function full name.
+ </p>
+
+<p>
+
+
+
+    the code below throws an error because the bar:"Hello" is unreachale meaning its note within the scope
+    hence it cannot be used.
+    function two2()
+    {
+      return
+      {
+          bar: "hello"
+      };
+    }
+
+
+
+    </p>
+
+
+</body>
+</html>
